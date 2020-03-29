@@ -12,14 +12,18 @@ This dataset became a typical test case for many statistical classification tech
 in machine learning such as support vector machines
 
 ## Content
-The dataset contains a set of 150 records under 5 attributes - Petal Length, Petal Width, Sepal Length, Sepal width and Class(Species).
-
+The dataset contains a set of 150 records under 5 attributes - Petal Length, Petal Width,
+Sepal Length, Sepal width and Class(Species).                           
+<img src="https://miro.medium.com/max/3347/0*GVjzZeYrir0R_6-X.png" >
 ## Approach
 The approach we use here revolves around fitcsvm function provided in Matlab. But the 
 problem lies in the fact that fitcsvm can only perform binary classification, whereas
 we have three class classification here. To solve that problem, we use one to all
 classification where we train two models, one to classify between Setosa and rest and 
-another between Virginica and Iris versicolor. 
+another between Virginica and Iris versicolor. Our approch of dividing first between setosa 
+and rest is justified by below given plot which show setosa can be easily separated from 
+rest as dataset have a sufficient gap.                            
+<img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_pca_vs_lda_thumb.png"> 
 
 ## Files
 **accuracy.m** - This function is to calculate the accuracy and arguments needed here are "predicted output" and "actual output."
